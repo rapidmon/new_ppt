@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #FFCD4A 0%, #2FA599 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title{
+    position: absolute;
+    top: 40px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'NanumSquareRound';
+    color: #333333;
+    font-weight: 600;
+    box-shadow: 3px 3px 3px 0px #4a4a4a85, inset 3px 3px 3px 1px #f7f7f7;
+    font-size: 16px;
+    background-image: url(../images/reload.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/hamburger_menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-bar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc(100% - 100px);
+    width: 500px;
+    left: -550px;
+    bottom: 0;
+    z-index: 20;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    box-shadow: 8px 8px 20px 0px #4a4a4a85, inset 3px 3px 6px 1px #f1f1f1;
+    background-color: #e7e7e7;
+    transition: 2s;
+}
+
+.nav-bar-open{
+    transform: translateX(550px);
+}
+
+.nav-title{
+    height: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+    width: 100%;
+    font-family: 'NanumSquareRound';
+    font-size: 42px;
+    box-shadow: 0px 1px 13px 0px #4a4a4a85;
+    z-index: 10;
+}
+
+.nav-list{
+    height: 12%;
+    border: none;
+    background-color: #e7e7e7;
+    width: 90%;
+    font-family: 'NanumSquareRound';
+    font-size: 24px;
+    border-bottom: 1px solid #C7C6CB;
+    color: #2FA599;
+    text-align: left;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    background-image: url(../images/next_black.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+.nav-list::before{
+    font-family: 'NanumSquareRound';
+    width: 30px;
+    height: 30px;
+    background-color: #2FA599;
+    border-radius: 100%;
+    color: white;
+    box-shadow: 2px 2px 3px 0px #4a4a4a85;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list:nth-child(2):before{
+    content: "1";
+}
+.nav-list:nth-child(3):before{
+    content: "2";
+}
+.nav-list:nth-child(4):before{
+    content: "3";
+}
+.nav-list:nth-child(5):before{
+    content: "4";
+}
+.nav-list:nth-child(6):before{
+    content: "5";
+}
+.nav-list:nth-child(7):before{
+    content: "6";
+}
+.nav-list:nth-child(8):before{
+    content: "7";
+}
+
+.nav-list span{
+    font-size: 20px;
+    color: black;
+}
+
+.left-btn{
+    position: absolute;
+    left: 100px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../images/next.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    transform: rotate(180deg);
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.right-btn{
+    position: absolute;
+    right: 100px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../images/next.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    transform: translateX(calc(100% / 9 * 4));
+    transition: 1s;
+}

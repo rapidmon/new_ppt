@@ -1,0 +1,57 @@
+.header-part{
+    width: 1200px;
+    height: 600px;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 8px 8px 20px 0px #4a4a4a85, inset 3px 3px 6px 1px #f1f1f1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/man_opacity.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 95% 100px;
+    position: relative;
+}
+
+.header-top{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #d1d1d1;
+    box-shadow: 0px 1px 13px 0px #4a4a4a85;
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-deco{
+    font-family: 'Yellowtail', cursive;
+    color: #2FA599;
+    position: absolute;
+    font-size: 50px;
+    left: 85px;
+    transform: rotate(331deg);
+    top: 180px;
+}
+
+.header-title{
+    font-family: 'GangwonEduPowerExtraBoldA', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.header-text{
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    font-family: 'NanumSquareRound';
+    font-size: 20px;
+    line-height: 200%;
+}
