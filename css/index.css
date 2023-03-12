@@ -276,6 +276,8 @@ body{
     bottom: calc(50% - 235px);
     font-size: 40px;
     z-index: 40;
+    transition: 1s;
+    opacity: 0;
 }
 
 .article-part-text{
@@ -285,6 +287,8 @@ body{
     font-family: 'NanumSquareRound';
     font-size: 30px;
     z-index: 40;
+    transition: 1s;
+    opacity: 0;
 }
 
 .white{

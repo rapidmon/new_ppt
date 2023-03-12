@@ -7,11 +7,15 @@ const $number_wrapper = document.querySelectorAll(".number-wrapper");
 const $bathroom_img = document.querySelector(".bathroom-img");
 const $tap = document.querySelector(".tap");
 const $water = document.querySelector(".water");
+const $article_part_title = document.querySelectorAll(".article-part-title");
+const $article_part_text = document.querySelectorAll(".article-part-text");
 
 $bathroom_img.addEventListener("click", function(){
     if($article_part[0].classList.contains("article-part-open")){
         $tap.classList.add("tap-rotate");
         $water.style.height = "70%";
+        $article_part_text[0].style.opacity = 1;
+        $article_part_title[0].style.opacity = 1;
     }
 })
 
@@ -26,6 +30,8 @@ $bend_account_img_wrapper.addEventListener("click", function(){
             setTimeout(function(){
                 $account_img.style.transition = "1.5s";
                 $account_img.style.transform = "scale(5)";
+                $article_part_text[1].style.opacity = 1;
+                $article_part_title[1].style.opacity = 1;
             }, 1000)
         }, 1000)
     }
@@ -642,5 +648,7 @@ $snow_part.addEventListener("click", function(){
         $number_wrapper[2].style.top = `-${window.getComputedStyle($number_wrapper[2]).getPropertyValue('height').split("px")[0]*8/9}px`
         $number_wrapper[3].style.top = `-${window.getComputedStyle($number_wrapper[3]).getPropertyValue('height').split("px")[0]*4/5}px`
         $number_wrapper[4].style.top = `-${window.getComputedStyle($number_wrapper[4]).getPropertyValue('height').split("px")[0]*6/7}px`
+        $article_part_text[2].style.opacity = 1;
+        $article_part_title[2].style.opacity = 1;
     }
 })
